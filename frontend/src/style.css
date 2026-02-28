@@ -1,0 +1,34 @@
+@import 'tailwindcss';
+
+@theme {
+  /* 定义深色模式变体，使其支持 .dark 类选择器 */
+  --variant-dark: .dark &;
+
+  /* 全局圆角管理 */
+  --radius-card: 0.6rem; /* 大卡片圆角 (3xl) */
+  --radius-inner: 0.6rem; /* 内部容器或中型卡片 (2xl) */
+  --radius-select: 0.6rem; /* 下拉框或较小容器 (xl) */
+  --radius-button: 0.3rem; /* 按钮、标签 (lg) */
+
+  /* 语义化色彩体系 - 默认值 (Tailwind 自动将其映射为 --color-app-*) */
+  --color-app-bg: #f8fafc;
+  --color-app-card: #ffffff;
+  --color-app-border: #e2e8f0;
+  --color-app-text: #1e293b;
+  --color-app-text-muted: #64748b;
+}
+
+@layer base {
+  body {
+    @apply transition-colors duration-300;
+  }
+
+  /* 语义化色彩体系 - 深色模式覆盖 */
+  .dark {
+    --color-app-bg: #020617;
+    --color-app-card: #0f172a;
+    --color-app-border: #1e293b;
+    --color-app-text: #f1f5f9;
+    --color-app-text-muted: #94a3b8;
+  }
+}
