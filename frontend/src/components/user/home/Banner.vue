@@ -2,7 +2,7 @@
 import { computed } from 'vue'
 import { getCarouselSlides } from '@/stores/homeStore'
 
-defineOptions({ name: 'HomeBanner' })
+//defineOptions({ name: 'HomeBanner' })
 
 const slides = computed(() => getCarouselSlides())
 </script>
